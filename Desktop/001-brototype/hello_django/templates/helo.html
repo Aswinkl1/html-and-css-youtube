@@ -1,0 +1,11 @@
+{% for movie_obj in movie%}
+
+    <h1>Title: {{movie_obj.title | upper}}</h1>
+    <p>year: {{movie_obj.year}}</p>
+    <p>plot:{{movie_obj.plot | default:"no data available"}}</p>
+    {% if movie_obj.ott%}
+        <P>can get on ott</P>
+    {% else%}
+    <P>can't get on ott</P>
+    {%endif%}
+{%endfor%}

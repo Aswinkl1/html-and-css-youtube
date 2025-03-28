@@ -1,0 +1,21 @@
+<form action="" method="post" enctype="multipart/form-data">
+    {% csrf_token %} 
+    <p>
+        <label for="">Username</label>
+        <input type="text" name="Username" id="">
+    </p>
+
+    <p>
+        <label for="">password</label>
+        <input type="password" name="password" id="">
+    </p>
+ 
+    <button type="submit">submit</button>
+ 
+ </form>
+
+ {% if error_message%}
+
+<p style="background-color: red; color: white;">{{error_message}}</p>
+
+{% endif %}

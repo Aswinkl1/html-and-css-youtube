@@ -1,0 +1,65 @@
+{% extends 'blank_layout.html' %}
+
+{% block content %}
+
+
+
+<h1>Movie list {{visits}} times</h1>
+
+{% for movie_obj in movies_visited_details %}
+
+<p>{{movie_obj.title}}</p>
+
+{% endfor %}
+
+<table border="1">
+    <thead>
+        <tr>
+            <th>title</th>
+        
+            <th>year</th>
+        
+            <th>plot</th>
+
+            <th>image</th>
+
+            <th>Edit/Delete</th>
+        
+        </tr>
+
+    </thead>
+   
+{% for movie_obj in movie %}
+    <tbody>
+    <tr>
+        <td>
+            <p>{{movie_obj.title}}</p>
+        </td>
+        <td>
+            <p>{{movie_obj.year}}</p>
+        </td>
+        <td>
+            <p>{{movie_obj.plot | default:"no data"}}</p>
+        </td>
+        <td>
+            {%if movie_obj.poster%}
+                <img src="{{movie_obj.poster.url}}" alt="" srcset="" style="width: 40px; ">
+            {%else%}
+                <p>no data</p>
+            {% endif %}
+        </td>
+        <td>
+            <a href="{% url 'edit' movie_obj.id %}">edit</a>/ <a href="{% url 'delete' movie_obj.id %}">delete</a>
+        </td>
+
+    </tr>
+</tbody>
+
+
+
+{% endfor %}
+</table>
+
+
+
+{% endblock%}
