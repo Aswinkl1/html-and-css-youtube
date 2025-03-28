@@ -1,0 +1,289 @@
+p{
+    margin-top: 0;
+    margin-bottom: 0;
+    font-family:  Roboto ,arial;
+}
+
+body{
+    margin: 0;
+    padding-top: 55px;
+    padding-left: 73px;
+    background-color: rgb(249, 249, 249);
+    padding-right: 15px;
+}
+
+button{
+    cursor: pointer;
+}
+/* header csss */
+
+.header{
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 38px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: white;
+    border-bottom-width: 1px;
+    border-bottom-color: lightgray;
+    border-bottom-style: solid;
+    z-index: 1;
+}
+
+.left-div{
+    display: flex;
+    align-items: center;
+    
+}
+
+.left-menu-div{
+    margin-left: 17px;
+    margin-right: 17px;
+}
+.menu-img{
+    width: 20px;
+}
+
+.youtune-img{
+    width:65px
+}
+.middle-div{
+    display: flex;
+    align-items: center;
+    max-width:323px ;
+    flex: 1;
+    margin-left: 35px;
+    margin-right: 15px;
+}
+
+
+
+.middle-input{
+    flex: 1;
+    height: 23px;
+    border-color: lightgray;
+    border-width: 1px;
+    border-style: solid;
+    min-width: 0;
+    width: 10px;
+    box-shadow: inset -1px 1px 5px 0px rgba(0,0,0,0.05);
+
+}
+.middle-input:focus{
+    outline: none;
+}
+
+.search-button{
+    border-width: 1px;
+    border-color: lightgray;
+    border-style: solid;
+    height: 26px;
+    width: 40px;
+    background-color: rgb(247, 247, 247);
+    margin-left: -1px;
+    position: relative;
+}
+.search-button .toolip{
+    position: absolute;
+    background-color: gray;
+    font-size: 11px;
+    color: white;
+    padding: 4px;
+    bottom: -28px;
+    left: 0px;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.search-button:hover .toolip{
+    opacity: 1;
+}
+.voice-buton{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    margin-left: 5px;
+    height: 26px;
+    border-width: 0;
+    background-color: rgb(247, 247, 247);
+    position: relative;
+
+}
+
+.toolip{
+    position: absolute;
+    white-space: noWrap;
+    font-size: 9px;
+    background-color: gray;
+    padding: 4px;
+    color: white;
+    bottom: -25px;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.create-button:hover .toolip{
+    bottom: -18px;
+    opacity: 1;
+}
+
+
+.create-button-notificatio:hover .toolip,
+.voice-buton:hover .toolip{
+    
+    opacity: 1;
+}
+.end-div{
+    
+   display: flex;
+   align-items: center;
+   justify-content: space-evenly;
+   width: 140px;
+   margin-right: 8px;
+
+   
+}
+
+.create-button-notificatio{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    border: none;
+    background-color: white;
+}
+.notification{
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top:0;
+    right: 4px;
+    border-radius: 50%;
+    background-color: rgb(193, 0, 0);
+    font-size: 8px;
+    color: white;
+    width: 10px;
+
+}
+.create-button{
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    border: 0;
+}
+/* **************************************************************************** */
+
+/* ***************************************Side bar css ********************************* */
+
+.sidebar{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    top: 38px;
+    background-color: white;
+    width: 56px;
+    border-right-width: 1px;
+    border-right-color: lightgray;
+    border-right-style: solid;
+    z-index: 2;
+}
+
+.sidebar-div{
+    display: flex;
+    height: 48px;
+    flex-direction: column;
+    /* background-color: gray; */
+    justify-content: center;
+    align-items: center;
+}
+
+.sidebar-heading{
+    /* align-items: center; */
+    font-family: roboto,arial;
+    font-size: 8px;
+}
+
+
+
+
+
+/* ****************************************************************************************** */
+
+/**************************************************** VEDIO CSS ***********************************/
+.main-div{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr ;
+    column-gap: 9px;
+    row-gap: 15px;
+
+}
+
+.thumbnail-div{
+    position: relative;
+
+}
+
+.vedio-timmer{
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    background-color: black;
+    color: white;
+    font-size: 11px;
+    padding: 2px;
+    
+}
+.img-thumbnails{
+    width: 100%;
+    
+}
+
+.div-profile-info{
+    display: grid;
+    grid-template-columns:40px 1fr ;
+
+}
+
+.profile-pic{
+    width: 80%;
+    border-radius: 50%;
+    margin-top: 8px;
+}
+.div-vedioInfo{
+   
+    margin-top: 7px;
+}
+
+.vedio-title{
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 16px;
+    margin-bottom: 9px;
+}
+.creator-name,.vedio-stats{
+    font-size: 10px;
+    color: rgb(96, 96, 96);
+    margin-top: 5px;
+}
+
+@media (max-width:750px){
+    .main-div{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width:500px){
+    .main-div{
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (min-width:1000px){
+    .main-div{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
